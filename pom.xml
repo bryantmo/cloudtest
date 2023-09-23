@@ -14,6 +14,7 @@
         <module>boot-project-application1</module>
         <module>boot-project-application2</module>
         <module>test-eureka</module>
+        <module>boot-project-application3</module>
     </modules>
 
     <build>

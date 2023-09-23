@@ -3,21 +3,19 @@ package com.bryant;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-// EnableEurekaClient 注解启动一个服务注册中心的客户端
 @EnableEurekaClient
 @SpringBootApplication
-public class RibbonTestServerApp {
+@EnableCircuitBreaker
+@EnableFeignClients
+public class App3Server {
 
     public static void main(String[] args) {
-        new SpringApplicationBuilder(RibbonTestServerApp.class)
+        new SpringApplicationBuilder(App3Server.class)
                 .web(WebApplicationType.SERVLET)
                 .run(args);
     }
-
 }
