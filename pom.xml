@@ -16,6 +16,7 @@
         <module>test-eureka</module>
         <module>test-zuul</module>
         <module>boot-project-application3</module>
+        <module>config</module>
     </modules>
 
     <build>
