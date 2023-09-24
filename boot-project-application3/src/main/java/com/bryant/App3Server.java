@@ -10,7 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableEurekaClient
 @SpringBootApplication
 @EnableCircuitBreaker
-@EnableFeignClients
+@EnableFeignClients //开启Feign客户端
 public class App3Server {
 
     public static void main(String[] args) {

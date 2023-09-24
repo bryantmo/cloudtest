@@ -24,16 +24,16 @@ public class HelloController {
     @GetMapping(value = "/test")
     public String test(@RequestParam("name") String name) {
 
-        discoveryClient.getServices().forEach(id -> {
-            discoveryClient.getInstances(id).forEach(instance -> {
-                logger.info("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
-            });
-        });
+//        discoveryClient.getServices().forEach(id -> {
+//            discoveryClient.getInstances(id).forEach(instance -> {
+//                logger.info("/hello, host:" + instance.getHost() + ", service_id:" + instance.getServiceId());
+//            });
+//        });
 
-        System.out.println(bookConfig.getName());
-        System.out.println(bookConfig.getAuthor());
-        System.out.println(bookConfig.getPrice());
-        System.out.println(bookConfig.getDesc());
+//        System.out.println(bookConfig.getName());
+//        System.out.println(bookConfig.getAuthor());
+//        System.out.println(bookConfig.getPrice());
+//        System.out.println(bookConfig.getDesc());
         return bookConfig.toString() + ", name : " + name;
     }
 }

@@ -7,11 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.commons.lang.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Component;
 
 /**
  * 简单的 zuul 过滤器，它实现了在请求被路由之前检查 HttpservletRequest 中是否有accessToken参数
  * 若有就进行路由，若没有就拒绝 访问，返回401 Unauthorized错误。
  */
+@Component
 public class AccessFilter extends ZuulFilter {
 
     private static final Logger logger = LoggerFactory.getLogger(AccessFilter.class);

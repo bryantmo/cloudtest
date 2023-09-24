@@ -27,8 +27,8 @@ public class TestRibbonController {
     public String testRibbonConsumer(@RequestParam("name") String name) {
         HashMap<String, String> params = new HashMap<>();
         params.put("name", name);
-        String body = restTemplate.getForEntity("http://application1/hello/test?name={}", String.class, params).getBody();
-        return String.format("testRibbonConsumer: body =  {}", body);
+        String body = restTemplate.getForEntity("http://application1/hello/test?name={name}", String.class, params).getBody();
+        return String.format("testRibbonConsumer: body =  %s", body);
     }
 
     /**
